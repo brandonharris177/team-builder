@@ -1,8 +1,8 @@
 import React from "react";
 
-const DisplayTeam = (props) => {
+const DisplayTeam = (propsFromTheReturnStatementInApp) => { //the props here could be replaced by the word 
 
-    const teamMemeber = props.teamMember
+    const teamMemeber = propsFromTheReturnStatementInApp.passAsteamMember //same with the props here
 
     return (
         <>
@@ -12,5 +12,7 @@ const DisplayTeam = (props) => {
         </>
     )
 } 
+
+//the teamMember.$anything assigns the values that are given from the data. If we were importing information or geting it from axios these would have to match from there but since we are creating these values in form they match what is created in Form.js
 
 export default DisplayTeam;
