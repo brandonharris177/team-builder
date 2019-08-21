@@ -1,16 +1,16 @@
 import React, {useState} from "react";
 
 const Form = (props) => {
-    const setMembers = props.passSetMembersToForm; //here I have redeclared  the parts of the props for understanding but I am free to name them whatever I want
+    const setMembers = props.passSetMembersToForm; //here I have redeclared the parts of the props for understanding but, I am free to name them whatever I want
     const members = props.passMembersToForm;
-    const [member, setMember] = useState({ //this is new to create new members and are the values that are accounted for in the DisplayTeam.js
+    const [member, setMember] = useState({ //this is new to create new members these are the values that are accounted for in the DisplayTeam.js
         name: "",
         email: "",
         role: ""
     });
     const changeHandler = event => {
         setMember({...member, [event.target.name]: event.target.value})
-        //...member gives us the orignal state of member whaever it last was {...$anything} (in this case {...member}) then we add whatever the value is (event.target.value) to whatever the changed feild it (event.target.name)
+        //...member gives us the orignal state of member whaever it last was {...$anything} (in this case {...member}) then we add whatever the value is (event.target.value) to whatever the changed feild it corresponds to (event.target.name)
     }
     const submitForm = event => {
         event.preventDefault();

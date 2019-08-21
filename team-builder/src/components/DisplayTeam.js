@@ -1,8 +1,8 @@
 import React from "react";
 
-const DisplayTeam = (propsFromTheReturnStatementInApp) => { //the props here could be replaced by the word 
+const DisplayTeam = (propsFromTheReturnStatementInApp) => { //the props here could be replaced by anything you want. 
 
-    const teamMemeber = propsFromTheReturnStatementInApp.passAsteamMember //same with the props here
+    const teamMemeber = propsFromTheReturnStatementInApp.passAsTeamMember //same with the props here as long as they match. I have reanamed it teamMember to remember what it is.
 
     return (
         <>
@@ -13,6 +13,6 @@ const DisplayTeam = (propsFromTheReturnStatementInApp) => { //the props here cou
     )
 } 
 
-//the teamMember.$anything assigns the values that are given from the data. If we were importing information or geting it from axios these would have to match from there but since we are creating these values in form they match what is created in Form.js
+//the teamMember.$anything assigns the values that are given from the data. If we were importing information or geting it from axios these would have to match the keys on the information we recived. However, since we are creating these values in From.js they match what is created in Form.js
 
 export default DisplayTeam;
